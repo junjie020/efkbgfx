@@ -47,6 +47,7 @@ struct InitArgs {
 	void (*texture_unload)(int id, void *ud);
 	bgfx_texture_handle_t (*texture_handle)(int id, void *ud);	// translate id to handle
 	void * ud;
+	bool invz;  //use inverse-z or not. if depth test enable, 'true' for BGFX_STATE_DEPTH_TEST_GEQUAL, 'fasle' for BGFX_STATE_DEPTH_TEST_LEQUAL
 };
 ```
 
